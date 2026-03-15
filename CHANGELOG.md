@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ## v1.2.0
 
 ### Added
+
 - Added separate configuration for **web and SSH access CIDR**.
 - Introduced new parameters:
   - `ssh_port`
@@ -14,10 +15,12 @@ All notable changes to this project will be documented in this file.
   - `web_allowed_cidr`
 
 ### Changed
+
 - Security group configuration now separates **web traffic** and **SSH access** rules.
 - SSH access can now be restricted independently from web access.
 
 ### Notes
+
 This change improves security by allowing different CIDR ranges for application access and administrative SSH access.
 
 ---
@@ -25,6 +28,7 @@ This change improves security by allowing different CIDR ranges for application 
 ## v1.1.0
 
 ### Added
+
 - Added support to optionally allow **SSH access (port 22)** in the EC2 security group.
 - Introduced configuration option `enable_ssh` to control SSH access.
 

@@ -32,8 +32,9 @@ module "ec2_container" {
     container_image  = "swinkler/tia-webserver"
     container_name   = "web"
     container_port   = 80
-    host_port        = 8080
+    host_port        = 80
     web_allowed_cidr  = "0.0.0.0/0"
     ssh_allowed_cidr  = "0.0.0.0/0"
+    ssh_port          = 22
   }
 }
