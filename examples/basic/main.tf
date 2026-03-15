@@ -24,6 +24,7 @@ module "ec2_container" {
   instance_type    = "t2.micro"
   key_name         = "development-key"
   root_volume_size = 10
+  enable_ssh       = true
 
   environment = {
     name             = "dev"

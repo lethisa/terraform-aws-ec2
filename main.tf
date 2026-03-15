@@ -11,20 +11,20 @@ module "instance_sg" {
       from_port   = var.environment.host_port
       to_port     = var.environment.host_port
       protocol    = "tcp"
-      cidr_blocks = var.environment.allowed_cidr
+      cidr_blocks = var.environment.web_allowed_cidr
     },
     {
-      from_port   = 22
-      to_port     = 22
+      from_port   = var.environment.ssh_port
+      to_port     = var.environment.ssh_port
       protocol    = "tcp"
-      cidr_blocks = var.environment.allowed_cidr
+      cidr_blocks = var.environment.ssh_allowed_cidr
     }
   ] : [
     {
       from_port   = var.environment.host_port
       to_port     = var.environment.host_port
       protocol    = "tcp"
-      cidr_blocks = var.environment.allowed_cidr
+      cidr_blocks = var.environment.web_allowed_cidr
     }
   ]
 

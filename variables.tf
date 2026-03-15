@@ -2,13 +2,15 @@ variable "environment" {
   description = "Configuration for the application environment and container runtime settings"
 
   type = object({
-    name             = string
-    background_color = string
-    container_image  = string
-    container_name   = string
-    container_port   = number
-    host_port        = number
-    allowed_cidr     = string
+    name              = string
+    background_color  = string
+    container_image   = string
+    container_name    = string
+    container_port    = number
+    host_port         = number
+    ssh_port          = number
+    web_allowed_cidr  = string
+    ssh_allowed_cidr  = string
   })
 }
 
