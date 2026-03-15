@@ -18,11 +18,11 @@ data "aws_vpc" "default" {
 }
 
 module "ec2_container" {
-  source = "../../"
-
+  source = "lethisa/ec2-container/aws"
+  version = "1.0.0"
   vpc_id           = data.aws_vpc.default.id
   instance_type    = "t3.micro"
-  key_name         = "my-keypair"
+  key_name         = "development-key"
   root_volume_size = 10
 
   environment = {
