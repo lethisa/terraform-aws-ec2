@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "ap-southeast-1"
+  region = "us-west-2"
 }
 
 data "aws_vpc" "default" {
@@ -18,10 +18,10 @@ data "aws_vpc" "default" {
 }
 
 module "ec2_container" {
-  source = "lethisa/ec2-container/aws"
-  version = "1.0.0"
+  source           = "lethisa/ec2/aws"
+  version          = "1.0.0"
   vpc_id           = data.aws_vpc.default.id
-  instance_type    = "t3.micro"
+  instance_type    = "t2.micro"
   key_name         = "development-key"
   root_volume_size = 10
 

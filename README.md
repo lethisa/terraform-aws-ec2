@@ -17,7 +17,7 @@ This module creates:
 
 ```hcl
 module "ec2_container" {
-  source           = "lethisa/ec2-container/aws"
+  source           = "lethisa/ec2/aws"
   version          = 1.0.0
   vpc_id           = "vpc-xxxx"
   instance_type    = "t3.micro"

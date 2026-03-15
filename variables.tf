@@ -32,3 +32,8 @@ variable "root_volume_size" {
   type        = number
   default     = 10
 }
+
+variable "enable_ssh" {
+  type    = bool
+  default = false
+}

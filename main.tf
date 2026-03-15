@@ -6,7 +6,20 @@ module "instance_sg" {
   description = "Security group for ${var.environment.name}"
   vpc_id      = var.vpc_id
 
-  ingress_with_cidr_blocks = [
+  ingress_with_cidr_blocks = var.enable_ssh ? [
+    {
+      from_port   = var.environment.host_port
+      to_port     = var.environment.host_port
+      protocol    = "tcp"
+      cidr_blocks = var.environment.allowed_cidr
+    },
+    {
+      from_port   = 22
+      to_port     = 22
+      protocol    = "tcp"
+      cidr_blocks = var.environment.allowed_cidr
+    }
+  ] : [
     {
       from_port   = var.environment.host_port
       to_port     = var.environment.host_port
