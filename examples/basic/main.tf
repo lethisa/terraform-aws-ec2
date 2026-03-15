@@ -19,7 +19,7 @@ data "aws_vpc" "default" {
 
 module "ec2_container" {
   source           = "lethisa/ec2/aws"
-  version          = "1.1.0"
+  version          = "1.2.0"
   vpc_id           = data.aws_vpc.default.id
   instance_type    = "t2.micro"
   key_name         = "development-key"
@@ -33,6 +33,7 @@ module "ec2_container" {
     container_name   = "web"
     container_port   = 80
     host_port        = 8080
-    allowed_cidr     = "0.0.0.0/0"
+    web_allowed_cidr  = "0.0.0.0/0"
+    ssh_allowed_cidr  = "0.0.0.0/0"
   }
 }
