@@ -18,8 +18,7 @@ data "aws_vpc" "default" {
 }
 
 module "ec2_container" {
-  source           = "lethisa/ec2/aws"
-  version          = "1.2.0"
+  source           = "../../"
   vpc_id           = data.aws_vpc.default.id
   instance_type    = "t2.micro"
   key_name         = "development-key"
