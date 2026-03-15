@@ -1,0 +1,76 @@
+
+
+# --------------------------------------------------
+# Terraform
+# --------------------------------------------------
+
+# Terraform working directory
+.terraform/
+**/.terraform/*
+**/**/.terraform/*
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Terraform plan output
+*.tfplan
+
+# Crash log
+crash.log
+
+# Terraform variable files (may contain secrets)
+*.tfvars
+*.tfvars.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# --------------------------------------------------
+# Sensitive files
+# --------------------------------------------------
+
+# Private keys
+*.pem
+*.key
+
+# Certificates
+*.crt
+*.p12
+
+# --------------------------------------------------
+# IDE / Editor
+# --------------------------------------------------
+
+.vscode/
+.idea/
+
+# --------------------------------------------------
+# OS files
+# --------------------------------------------------
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# --------------------------------------------------
+# Logs & temporary files
+# --------------------------------------------------
+
+*.log
+*.tmp
+*.bak
+
+# --------------------------------------------------
+# Optional (recommended to keep committed for reproducible builds)
+# --------------------------------------------------
+# .terraform.lock.hcl
