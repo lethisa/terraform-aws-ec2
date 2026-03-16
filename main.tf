@@ -19,7 +19,7 @@ module "instance_sg" {
       protocol    = "tcp"
       cidr_blocks = var.environment.ssh_allowed_cidr
     }
-  ] : [
+    ] : [
     {
       from_port   = var.environment.host_port
       to_port     = var.environment.host_port
